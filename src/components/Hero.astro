@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { getIcon } from "../utils/iconMapper";
+
+interface Props {
+  hero: {
+    name: string;
+    title: string;
+    description: string;
+    avatar: ImageMetadata | string;
+    location?: string;
+    socialLinks: Array<{
+      url: string;
+      icon: string;
+      label: string;
+    }>;
+  };
+}
+
+const { hero } = Astro.props;
+---
+
+<section class="hero min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl gap-8">
+    <div class="avatar">
+      <div
+        class="w-48 ring-primary ring-offset-base-100 rounded-full ring-2 ring-offset-2"
+      >
+        {typeof hero.avatar === 'string' ? (
+          <img src={hero.avatar} alt={hero.name} />
+        ) : (
+          <Image src={hero.avatar} alt={hero.name} />
+        )}
+      </div>
+    </div>
+    <div class="max-w-2xl">
+      <h1 class="text-5xl font-bold mb-4">
+        Hi, I'm {hero.name}
+      </h1>
+      <p class="text-xl text-base-content/80 mb-2">{hero.title}</p>
+      {hero.location && <p class="text-base-content/60 mb-4">{hero.location}</p>}
+      <p class="text-lg leading-relaxed mb-6">
+        {hero.description}
+      </p>
+      <div class="flex gap-4">
+        {hero.socialLinks.map((link) => {
+          const IconComponent = getIcon(link.icon as any);
+          return (
+            <div class="tooltip tooltip-top" data-tip={link.label}>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-circle btn-ghost"
+                aria-label={link.label}
+              >
+                <IconComponent class="size-6" />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>

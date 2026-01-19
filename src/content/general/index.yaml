@@ -1,0 +1,22 @@
+enableThemeSelector: true
+extraLinksEnabled: true
+extraLinks:
+  - link: /blog/guides/bloomfolio-complete-guide-building-your-portfolio
+    icon: Flower2
+    label: Bloomfolio Guide
+  - link: /blog/guides/content-collections-guide
+    icon: BookOpen
+    label: Content Guide
+  - link: /blog/guides/markdown-guide
+    icon: FileText
+    label: Markdown Guide
+  - link: https://github.com/lauroguedes/bloomfolio
+    icon: CodeXml
+    label: GitHub Repo
+showAboutSection: true
+showProjectsSection: true
+showBlogSection: true
+showWorkSection: true
+showEducationSection: true
+showHackathonsSection: true
+showContactSection: true

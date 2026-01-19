@@ -1,0 +1,32 @@
+name: Ujjwal
+title: An avid developer, man of culture, and somewhat okay gamer.
+description: >-
+  Welcome to my little corner of the internet where I showcase my journey,
+  my work, and my skills.
+avatar: '@assets/hero/avatar.png'
+location: 🇮🇳 India 
+socialLinks:
+  - url: ujjwalkandera23@tutamail.com
+    icon: Email
+    label: Email
+  - url: https://github.com/ujjwal-dev23
+    icon: GitHub
+    label: GitHub
+  - url: https://linkedin.com/in/ujjwal-aa438a358 
+    icon: LinkedIn
+    label: LinkedIn
+  # - url: https://twitter.com/leowg
+  #   icon: Twitter
+  #   label: X (Twitter)
+  # - url: https://bsky.app/profile/lauroguedes.bsky.social
+  #   icon: Bluesky
+  #   label: Bluesky
+  - url: https://instagram.com/kandera_ujjwal
+    icon: Instagram
+    label: Instagram
+  - url: https://www.twitch.tv/knuckles_on_twitch 
+    icon: Twitch
+    label: Twitch
+  # - url: https://codetips.cloud/u/lauroguedes
+  #   icon: FolderCode
+  #   label: CodeTips

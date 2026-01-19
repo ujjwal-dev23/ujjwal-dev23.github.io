@@ -1,0 +1,42 @@
+---
+import { Link } from "@lucide/astro";
+import { getIcon } from "../utils/iconMapper";
+
+interface Props {
+  extraLinks: Array<{
+    link: string;
+    icon: string;
+    label: string;
+  }>;
+}
+
+const { extraLinks } = Astro.props;
+---
+
+<div class="fab fab-flower">
+  <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
+  <div class="tooltip tooltip-top" data-tip="More links">
+    <div tabindex="0" role="button" class="btn btn-lg btn-accent btn-circle">
+      <Link class="size-6" />
+    </div>
+  </div>
+
+  <!-- Main Action button replaces the original button when FAB is open -->
+  <div class="fab-close">
+    Close <span class="btn btn-circle btn-lg btn-error">✕</span>
+  </div>
+
+  <!-- buttons that show up when FAB is open -->
+  {
+    extraLinks.map((link) => {
+      const IconComponent = getIcon(link.icon as any);
+      return (
+        <div class="tooltip tooltip-left" data-tip={link.label}>
+          <a href={link.link} class="btn btn-lg btn-circle">
+            <IconComponent class="size-5" />
+          </a>
+        </div>
+      );
+    })
+  }
+</div>
