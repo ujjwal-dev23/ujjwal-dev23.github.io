@@ -4,15 +4,15 @@ import { block } from "@keystatic/core/content-components";
 export default config({
   storage: import.meta.env.PUBLIC_KEYSTATIC_GITHUB_APP_SLUG
     ? {
-        kind: "github",
-        repo: {
-          owner: import.meta.env.PUBLIC_KEYSTATIC_REPO_OWNER!,
-          name: import.meta.env.PUBLIC_KEYSTATIC_REPO_NAME!,
-        },
-      }
-    : {
-        kind: "local",
+      kind: "github",
+      repo: {
+        owner: import.meta.env.PUBLIC_KEYSTATIC_REPO_OWNER!,
+        name: import.meta.env.PUBLIC_KEYSTATIC_REPO_NAME!,
       },
+    }
+    : {
+      kind: "local",
+    },
 
   singletons: {
     hero: singleton({
@@ -60,6 +60,7 @@ export default config({
                 { label: "YouTube", value: "YouTube" },
                 { label: "Email", value: "Email" },
                 { label: "CodeTips (Folder)", value: "FolderCode" },
+                { label: "Twitch", value: "Twitch" },
               ],
               defaultValue: "GitHub",
             }),

@@ -1,5 +1,5 @@
 enableThemeSelector: true
-extraLinksEnabled: true
+extraLinksEnabled: false
 extraLinks:
   - link: /blog/guides/bloomfolio-complete-guide-building-your-portfolio
     icon: Flower2
@@ -16,7 +16,7 @@ extraLinks:
 showAboutSection: true
 showProjectsSection: true
 showBlogSection: true
-showWorkSection: true
+showWorkSection: false
 showEducationSection: true
 showHackathonsSection: true
 showContactSection: true

@@ -1,6 +1,8 @@
 ---
 title: About Me
-photo: '@assets/about/photo.png'
-link: https://linkedin.com/in/lauroguedes
+photo: '@assets/about/photo.jpg'
+link: https://www.linkedin.com/in/ujjwal-aa438a358/
 ---
-I'm a full-stack developer with a passion for creating beautiful, functional, and user-friendly web applications. With experience in **modern frameworks and technologies**, I love turning ideas into reality through code. When I'm not coding, you can find me **exploring new technologies**, contributing to open source, or enjoying a good cup of coffee ☕.
+Currently a CS undergraduate at **NSUT**, I’ve spent my time outside the classroom diving into the niches of the field. While my projects range from full-stack web development to creating custom automation scripts, I have a particular fascination with emulation programming.
+
+While I have the most experience working with `C/C++`, `Python`, and Web Technologies, but I like to explore any and all knowledge I can in this vast field.
