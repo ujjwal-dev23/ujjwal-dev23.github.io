@@ -317,7 +317,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Institution Logo",
-          directory: "src/assets/education",
+          directory: "/src/assets/education",
           publicPath: "@assets/education/",
           description: "Optional institution logo",
         }),

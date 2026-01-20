@@ -2,87 +2,77 @@
 title: simple-chip8
 description: A CHIP8 interpreter in C++. Built to be as reasonably modular as possible.
 image: '@assets/projects/simple-chip8/image.png'
-startDate: 2025-06-01
-endDate: 2026-01-11
+startDate: 2025-03-23
+endDate: 2025-03-27
 skills:
-  - Laravel
-  - Inertia JS
-  - Vue 3
-  - TypeScript
-  - Monaco Editor
-  - Tailwind CSS
-demoLink: https://codetips.cloud
+  - C++
+  - SDL3
+  - Meson
+sourceLink: https://github.com/ujjwal-dev23/simple-chip8
 ---
-## About Code Tips
+# Simple Chip-8
 
-Code Tips is a community-driven platform designed to help developers share, discover, and manage code snippets efficiently. Built with the philosophy that knowledge sharing accelerates learning, it provides a centralized repository for code examples across multiple programming languages.
+CHIP-8 Emulator (Interpreter) written in C++ with SDL3.\
+Built to be as reasonably modular as possible.\
+This time actually complete *(hopefully)*.
 
-## Core Features
+### Build
 
-### Comprehensive Code Snippet Management
+> Requires SDL3 Libraries to be installed on the system
 
-- **Create & Edit**: Full-featured code editor powered by Monaco Editor
-- **100+ Language Support**: Extensive syntax highlighting for Python, JavaScript, TypeScript, Java, C++, Go, Rust, PHP, Ruby, and many more
-- **Organize Your Code**: Personal library for managing your code snippets
-- **CRUD Operations**: Complete control over your code tips - create, read, update, and delete
+Using [Meson](https://mesonbuild.com/)
 
-### Social & Discovery Features
+```bash
+#From Root Directory
+meson setup build
+cd build
+meson compile
+```
 
-- **Like System**: Show appreciation for useful code snippets
-- **Explore Public Tips**: Browse code examples shared by the community
-- **Browse by Language**: Filter and discover tips for specific programming languages
-- **User Profiles**: Public developer profiles showcasing contributions and statistics
-- **View & Share Tracking**: Monitor the reach and impact of your code tips
+Compile using g++
 
-### Search & Navigation
+```bash
+g++ -std=c++20 -O2 -lSDL3 src/*.cpp -o chip8
+```
 
-- **CodeTip Search**: Quickly find relevant code examples
-- **Language Filters**: Navigate through language-specific collections
-- **Discovery Feed**: Explore trending and popular code snippets
+*(not tested with -O3, but should work)*
 
-## Technical Architecture
+### Usage
 
-### Frontend Stack
+```bash
+chip8 --rom <path_to_rom>
+```
 
-Built with modern web technologies for a smooth, reactive experience:
+## TODOs
 
-- **Vue 3**: Progressive JavaScript framework with Composition API
-- **TypeScript**: Type-safe development for robust code
-- **Monaco Editor**: Industry-standard code editor (powers VS Code)
-- **Tailwind CSS**: Utility-first CSS framework for custom designs
-- **Ziggy**: Laravel route helper for seamless frontend routing
+- [x] Implement Opcodes
+- [x] Drawing Graphics
+- [x] Implement Delay Timer and Sound Timer
+- [ ] Sound Timer Beep
+- [x] Input Handling
+- [ ] Error Handling and Logging
+- [ ] Separate Threads for Timers
 
-### Backend Infrastructure
+### Additional Features
 
-Powered by **Laravel** (PHP), the backend provides:
+- [ ] Variable Resolution
+- [ ] Config File
+- [ ] Configurable keybindings
+- [ ] Better Frame Timing Management
+- [ ] Debug Mode
 
-- Route-based architecture with clean separation of concerns
-- RESTful API endpoints for all operations
-- Database-driven content management
-- Session-based authentication and user management
+## Test ROMs
 
-### User Experience
+- [x] Timendus' Chip8 Splash Screen
+- [x] IBM Logo
+- [x] Corax+ Opcode Test
+- [x] Flags Test
+- [ ] Quirks Test (CHIP8 Only)
 
-- **Light/Dark Mode**: Theme support with system preference detection
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **OG Image Generation**: Social media preview images for shared snippets
-- **Component-Driven UI**: Modular, maintainable component architecture
+Planning to add SUPER CHIP-8 capabilites after adding bells and whistles.
 
-## Authentication & User Management
+## References
 
-- Complete authentication system with login and registration
-- Email verification for account security
-- Password reset functionality
-- Social login integration for quick access
-- User profile customization
-
-## Purpose & Impact
-
-Code Tips serves as a valuable resource for developers of all skill levels - from beginners learning new languages to experienced developers documenting solutions. By providing a centralized, searchable platform for code snippets, it helps developers:
-
-- Save time by reusing proven code patterns
-- Learn from community-shared examples
-- Document and organize their own code library
-- Share knowledge and contribute to the developer community
-
-The platform emphasizes collaboration and knowledge exchange, making programming resources more accessible to everyone.
+1. <img src="https://www.google.com/s2/favicons?domain=devernay.free.fr" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/>[Cowgod's Chip-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+1. [How to write an emulator (CHIP-8 interpreter) - Multigesture.net](https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
+1. <img src="https://www.google.com/s2/favicons?domain=youtu.be" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/>[Introduction to Emulation: Build your own CHIP-8 emulator in just 1 hour! - Iridescence](https://youtu.be/YHkBgR6yvbY?si=Fj21qiRvNa_rC_jQ)
