@@ -27,11 +27,13 @@ const { hero } = Astro.props;
       <div
         class="w-48 ring-primary ring-offset-base-100 rounded-full ring-2 ring-offset-2"
       >
-        {typeof hero.avatar === 'string' ? (
-          <img src={hero.avatar} alt={hero.name} />
-        ) : (
-          <Image src={hero.avatar} alt={hero.name} />
-        )}
+        {
+          typeof hero.avatar === "string" ? (
+            <img src={hero.avatar} alt={hero.name} />
+          ) : (
+            <Image src={hero.avatar} alt={hero.name} loading="eager" />
+          )
+        }
       </div>
     </div>
     <div class="max-w-2xl">
@@ -39,27 +41,33 @@ const { hero } = Astro.props;
         Hi, I'm {hero.name}
       </h1>
       <p class="text-xl text-base-content/80 mb-2">{hero.title}</p>
-      {hero.location && <p class="text-base-content/60 mb-4">{hero.location}</p>}
+      {
+        hero.location && (
+          <p class="text-base-content/60 mb-4">{hero.location}</p>
+        )
+      }
       <p class="text-lg leading-relaxed mb-6">
         {hero.description}
       </p>
       <div class="flex gap-4">
-        {hero.socialLinks.map((link) => {
-          const IconComponent = getIcon(link.icon as any);
-          return (
-            <div class="tooltip tooltip-top" data-tip={link.label}>
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-circle btn-ghost"
-                aria-label={link.label}
-              >
-                <IconComponent class="size-6" />
-              </a>
-            </div>
-          );
-        })}
+        {
+          hero.socialLinks.map((link) => {
+            const IconComponent = getIcon(link.icon as any);
+            return (
+              <div class="tooltip tooltip-top" data-tip={link.label}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-circle btn-ghost"
+                  aria-label={link.label}
+                >
+                  <IconComponent class="size-6" />
+                </a>
+              </div>
+            );
+          })
+        }
       </div>
     </div>
   </div>
