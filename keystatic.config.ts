@@ -276,7 +276,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Company Logo",
-          directory: "src/assets/work",
+          directory: "public/work",
           publicPath: "@assets/work/",
           description: "Optional company logo",
         }),
@@ -317,7 +317,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Institution Logo",
-          directory: "src/assets/education",
+          directory: "public/education",
           publicPath: "@assets/education/",
           description: "Optional institution logo",
         }),
@@ -352,7 +352,7 @@ export default config({
         }),
         image: fields.image({
           label: "Project Image",
-          directory: "src/assets/projects",
+          directory: "public/projects",
           publicPath: "@assets/projects/",
           validation: { isRequired: true },
           description: "Main project image",
@@ -384,7 +384,7 @@ export default config({
           extension: "md",
           options: {
             image: {
-              directory: "src/assets/projects",
+              directory: "public/projects",
               publicPath: "@assets/projects/",
             },
           },
@@ -419,7 +419,7 @@ export default config({
         }),
         image: fields.image({
           label: "Cover Image",
-          directory: "src/assets/blog",
+          directory: "public/blog",
           publicPath: "@assets/blog/",
           validation: { isRequired: true },
           description: "Blog post cover image",
@@ -442,7 +442,7 @@ export default config({
           description: "Blog post content",
           options: {
             image: {
-              directory: "src/assets/blog",
+              directory: "public/blog",
               publicPath: "@assets/blog/",
             },
           },
@@ -523,7 +523,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Event Logo",
-          directory: "src/assets/hackathons",
+          directory: "public/hackathons",
           publicPath: "@assets/hackathons/",
           description: "Optional event logo",
         }),
