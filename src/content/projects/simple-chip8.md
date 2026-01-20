@@ -1,10 +1,7 @@
 ---
-title: Code Tips Platform
-description: >-
-  A centralized platform for storing and sharing code snippets, enabling
-  developers to create, discover, and manage code examples across 100+
-  programming languages.
-image: '@assets/projects/code-tips-platform/image.png'
+title: simple-chip8
+description: A CHIP8 interpreter in C++. Built to be as reasonably modular as possible.
+image: '@assets/projects/simple-chip8/image.png'
 startDate: 2025-06-01
 endDate: 2026-01-11
 skills:

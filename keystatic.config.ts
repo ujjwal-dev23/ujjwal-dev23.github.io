@@ -34,7 +34,7 @@ export default config({
         }),
         avatar: fields.image({
           label: "Avatar",
-          directory: "public/hero/",
+          directory: "/src/assets/hero/",
           publicPath: "@assets/hero/",
         }),
         location: fields.text({
@@ -92,7 +92,7 @@ export default config({
         }),
         photo: fields.image({
           label: "Photo",
-          directory: "public/about/",
+          directory: "/src/assets/about/",
           publicPath: "@assets/about/",
           description: "Your photo for the about section",
         }),
@@ -276,7 +276,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Company Logo",
-          directory: "public/work",
+          directory: "src/assets/work",
           publicPath: "@assets/work/",
           description: "Optional company logo",
         }),
@@ -317,7 +317,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Institution Logo",
-          directory: "public/education",
+          directory: "src/assets/education",
           publicPath: "@assets/education/",
           description: "Optional institution logo",
         }),
@@ -352,7 +352,7 @@ export default config({
         }),
         image: fields.image({
           label: "Project Image",
-          directory: "public/projects",
+          directory: "src/assets/projects",
           publicPath: "@assets/projects/",
           validation: { isRequired: true },
           description: "Main project image",
@@ -384,7 +384,7 @@ export default config({
           extension: "md",
           options: {
             image: {
-              directory: "public/projects",
+              directory: "src/assets/projects",
               publicPath: "@assets/projects/",
             },
           },
@@ -419,7 +419,7 @@ export default config({
         }),
         image: fields.image({
           label: "Cover Image",
-          directory: "public/blog",
+          directory: "src/assets/blog",
           publicPath: "@assets/blog/",
           validation: { isRequired: true },
           description: "Blog post cover image",
@@ -442,7 +442,7 @@ export default config({
           description: "Blog post content",
           options: {
             image: {
-              directory: "public/blog",
+              directory: "src/assets/blog",
               publicPath: "@assets/blog/",
             },
           },
@@ -523,7 +523,7 @@ export default config({
         }),
         logo: fields.image({
           label: "Event Logo",
-          directory: "public/hackathons",
+          directory: "src/assets/hackathons",
           publicPath: "@assets/hackathons/",
           description: "Optional event logo",
         }),
