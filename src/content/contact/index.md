@@ -1,10 +1,10 @@
 ---
 icon: MessageCircleCode
-linkUrl: https://x.com/leowg
-linkText: with a direct question on X (twitter)
+linkUrl: https://discord.com/users/477758607857942529
+linkText: on Discord
 footerIcon: Pickaxe
-footerText: Crafted by an Artisan
+footerText: Crafted by an Artisan | Theme by
 footerLinkText: Lauro Guedes
 footerLinkUrl: https://lauroguedes.dev
 ---
-Want to chat? shoot me a dm
+Want to chat? Shoot a dm
