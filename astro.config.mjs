@@ -29,5 +29,5 @@ export default defineConfig({
 
   site: "https://ujjwal-dev23.github.io",
 
-  base: "/",
+  // base: "/",
 });
