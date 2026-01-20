@@ -34,7 +34,7 @@ export default config({
         }),
         avatar: fields.image({
           label: "Avatar",
-          directory: "src/assets/hero",
+          directory: "public/hero/",
           publicPath: "@assets/hero/",
         }),
         location: fields.text({
