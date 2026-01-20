@@ -6,11 +6,12 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
-import vercel from "@astrojs/vercel";
+
+const isProd = process.env.NODE_ENV === 'production';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), markdoc(), keystatic()],
+  integrations: [react(), markdoc(), (!isProd ? [keystatic()] : [])],
 
   vite: {
     plugins: [tailwindcss()],
@@ -20,12 +21,6 @@ export default defineConfig({
   },
 
   output: "static",
-
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
 
   site: "https://ujjwal-dev23.github.io",
 
