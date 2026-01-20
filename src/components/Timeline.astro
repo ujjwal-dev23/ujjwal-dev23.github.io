@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
 
 interface Props {
   collection: "work" | "education";
@@ -29,7 +30,7 @@ const entries = await getCollection(collection);
 
 // Sort by start date, most recent first
 const sortedEntries = entries.sort(
-  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime(),
 );
 
 function formatPeriod(startDate: Date, endDate?: Date) {
@@ -49,7 +50,7 @@ const entriesWithContent = await Promise.all(
   sortedEntries.map(async (entry) => {
     const { Content } = await render(entry);
     return { entry, Content };
-  })
+  }),
 );
 ---
 
@@ -87,7 +88,11 @@ const entriesWithContent = await Promise.all(
                       {entry.data.logo && (
                         <div class="avatar">
                           <div class="w-12 mask mask-squircle">
-                            <img src={entry.data.logo} alt={entry.data.title} />
+                            {/* <img src={entry.data.logo} alt={entry.data.title} /> */}
+                            <Image
+                              src={entry.data.logo}
+                              alt={entry.data.title}
+                            />
                           </div>
                         </div>
                       )}
@@ -135,7 +140,11 @@ const entriesWithContent = await Promise.all(
                       {entry.data.logo && (
                         <div class="avatar">
                           <div class="w-10 mask mask-squircle">
-                            <img src={entry.data.logo} alt={entry.data.title} />
+                            {/* <img src={entry.data.logo} alt={entry.data.title} /> */}
+                            <Image
+                              src={entry.data.logo}
+                              alt={entry.data.title}
+                            />
                           </div>
                         </div>
                       )}
