@@ -1,0 +1,30 @@
+---
+import { getEntry, render } from "astro:content";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+// Get the slug from params and fetch the entry
+const { slug } = Astro.params;
+
+// Handle the slug
+const entry = await getEntry("projects", slug as string);
+
+// If entry doesn't exist, return 404
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await render(entry);
+---
+
+<ProjectLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  startDate={entry.data.startDate}
+  endDate={entry.data.endDate}
+  image={entry.data.image}
+  skills={entry.data.skills}
+  demoLink={entry.data.demoLink}
+  sourceLink={entry.data.sourceLink}
+>
+  <Content />
+</ProjectLayout>

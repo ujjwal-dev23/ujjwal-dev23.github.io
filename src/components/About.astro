@@ -1,0 +1,49 @@
+---
+import { Plus } from "@lucide/astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  title: string;
+  photo?: ImageMetadata | string;
+  Content: any;
+  link?: string;
+}
+
+const { title, photo, Content, link } = Astro.props;
+---
+
+<section id="about" class="py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <div class="card card-side bg-base-200 shadow-sm">
+      {
+        photo && (
+          <figure class="shrink-0 w-48">
+            {typeof photo === "string" ? (
+              <img src={photo} alt={title} />
+            ) : (
+              <Image src={photo} alt={title} />
+            )}
+          </figure>
+        )
+      }
+      <div class="card-body">
+        <h2 class="card-title text-2xl">{title}</h2>
+        <p class="text-lg">
+          <Content />
+        </p>
+        {
+          link && (
+            <div class="card-actions justify-end">
+              <div class="tooltip" data-tip="More about me">
+                <a href={link} target="_blank" class="btn btn-primary">
+                  <Plus class="size-5" />
+                </a>
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
