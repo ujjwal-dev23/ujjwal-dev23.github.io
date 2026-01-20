@@ -92,7 +92,7 @@ export default config({
         }),
         photo: fields.image({
           label: "Photo",
-          directory: "src/assets/about",
+          directory: "public/about/",
           publicPath: "@assets/about/",
           description: "Your photo for the about section",
         }),
