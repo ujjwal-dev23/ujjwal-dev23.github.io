@@ -1,11 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 const hackathonEntries = await getCollection("hackathons");
 
 // Sort by start date, most recent first
 const sortedHackathons = hackathonEntries.sort(
-  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime(),
 );
 
 function formatPeriod(startDate: Date, endDate?: Date) {
@@ -44,9 +45,9 @@ function formatPeriod(startDate: Date, endDate?: Date) {
             <div class="card-body">
               <div class="flex items-start gap-4">
                 {hackathon.data.logo && (
-                  <div class="avatar flex-shrink-0">
+                  <div class="avatar shrink-0">
                     <div class="w-16 h-16 rounded">
-                      <img
+                      <Image
                         src={hackathon.data.logo}
                         alt={hackathon.data.title}
                       />
@@ -57,7 +58,7 @@ function formatPeriod(startDate: Date, endDate?: Date) {
                   <time class="text-sm text-base-content/60">
                     {formatPeriod(
                       hackathon.data.startDate,
-                      hackathon.data.endDate
+                      hackathon.data.endDate,
                     )}
                   </time>
                   <h3 class="card-title mt-1">{hackathon.data.title}</h3>

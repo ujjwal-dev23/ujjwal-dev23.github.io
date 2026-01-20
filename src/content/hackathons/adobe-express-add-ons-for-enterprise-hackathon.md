@@ -1,18 +1,15 @@
 ---
-title: BatchEdit
+title: Adobe Express Add-ons for Enterprise Hackathon
+location: NSUT Main Campus, Dwarka, Delhi
 description: >-
-  Batch Edit is an Adobe Express add-on that turns hours of manual image editing
-  into seconds of automated processing. Built for Adobe Express Add-ons for
-  Enterprise Hackathon.
-image: '@assets/projects/batch-edit/image.jpeg'
+  Created an Adobe Express Add-on that allows users to batch import images and
+  perform one-click edits to all of them. The prototype consists of fundamental
+  edit functions like Intelligent Canvas Fitting, Global Watermarking, Bulk
+  Layout Transformation. It is self-contained, and runs completely in the adobe
+  sandbox without any dependencies on third-party services.
 startDate: 2026-01-16
 endDate: 2026-01-17
-skills:
-  - React
-  - Spectrum Web Components
-  - Typescript
-demoLink: >-
-  https://adobesparkpost.app.link/TR9Mb7TXFLb?mode=private&claimCode=wi301k277:A0VVA85K
+logo: '@assets/hackathons/adobe-express-add-ons-for-enterprise-hackathon/logo.png'
 sourceLink: https://github.com/ujjwal-dev23/express-add-on
 ---
 ## **Inspiration**
@@ -55,7 +52,7 @@ The project is built on a robust, performance-oriented stack:
 - **Sandboxed Architectures:** The team mastered the complexities of designing systems within a sandboxed environment, specifically managing the bridge between an add-on’s UI and the underlying document sandbox.
 - **Collaborative Development:** We refined our version control and collaborative workflows to maintain a clean, modular codebase while working across multiple feature branches.
 
-## **What's next for BatchEdit**
+## **What's next for Batch Edit**
 
 - **Community Engagement:** We aim to collaborate with the Adobe developer community to explore further enhancements for the Adobe Express ecosystem.
 - **Stable Release:** As experimental SDK APIs migrate to stable releases, we plan to move toward a full, public add-on launch with even deeper document integration.

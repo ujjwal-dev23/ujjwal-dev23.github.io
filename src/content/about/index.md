@@ -3,7 +3,7 @@ title: About Me
 photo: '@assets/about/photo.png'
 link: https://www.linkedin.com/in/ujjwal-aa438a358/
 ---
-CS Undergrad at Netaji Subhash University of Technology, Delhi.\
+CS Undergrad at **Netaji Subhash University of Technology, Delhi**.\
 Passionate about Web Development, Emulation Programming, Scripting, and Automation.
 
 I strive to write readable code and build modular systems.
